@@ -15,11 +15,20 @@ body{
 
    .wrapper{
        display: flex;
-       margin: 120px auto;
+       margin: 150px auto;
        padding-left: 20%;
-       margin-top: 95px;
+       margin-top: 40px;
       
    }
+
+   .wrapper h2{
+    position: absolute;
+    top: -35px;
+    left: 25%;
+    color: #fff;
+    font-size: 30px;
+
+}
 
    .form-area{
        display: flex;
@@ -119,17 +128,6 @@ label{
    
 }
 
-
-
-
-.wrapper h2{
-    position: absolute;
-    top: -15%;
-    left: 25%;
-    color: #fff;
-    font-size: 30px;
-
-}
 .new input{
     position: absolute;
     top: -4%;
@@ -148,7 +146,7 @@ label{
 }
 .error{
     position: absolute;
-    top: -15%;
+    top: -15px;
     left: 72%;
     font-size: 20px;
 }
