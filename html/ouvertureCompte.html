@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style.css"/>
    
 
     <title>Formulaire d'ouvertue compte</title>
@@ -11,97 +11,162 @@
 <body>
     <div class="wrapper">
         <h2>Formulaire d'ouverture d'un compte</h2>
+        <div class="error" id="message_error"></div>
 
-        <form action="" class="form-area" id="compteForm">
+        <form action="" class="form-area" id="compteForm" onsubmit="return  validation()">
 
-            <fieldset class="fieldset1">
-                <legend class="legend">Information du compte:</legend>
-                <div class="compte">
-
-                    <label for="">compte:</label>
-                    <select name="cmpt" id="compte">
-                        <option value="1">Choisir un type de compte</option>
-                        <option value="epargne">Compte epargne</option>
-                        <option value="courant">Compte courant</option>
-                        <option value="bloque">Compte bloque</option>
-                    </select>
- 
-                    <label for="">Numero compte</label>
-                    <input type="text" name="numCompte" id="numCompte" placeholder="Numero compte">
-
-                    <label for="">Numero agence</label>
-                    <input type="text" name="numAgence" id="numAgence" placeholder="Numero Agance">
-
-                    <label for="">Cle rip</label>
-                    <input type="text" name="cleRip" id="cleRip" placeholder="Cle rip">
-                
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset2">
-                <legend class="legend">Information client:</legend>
-                <div class="client1">
-
-                    <button class="btnNew" onclick="myNewClientFunction()">Nouveau client</button>
-                    <button class="btnOld" onclick="myOldClientFunction()">Ancien client</button>
-
-                    <div id="AncClient">
-                        <label class="control-label">Liste des clients</label>
-                        <select name="id_asclient" class="form-control" >
-                            <option value="" disabled>---choisir un client---</option>
-                            <option value="">...</option>
-                        </select> 
+          <div id="divFieldset">
+            <div>
+                <fieldset class="fieldset1">
+                    <legend class="legend">Information du compte:</legend>
+                    <div class="compte">
+                        <div >
+                            <label for="">compte:</label>
+                            <select name="selectCompte" id="selectCompte" onchange="myFunction()">
+                                <option value="1">Choisir un type de compte</option>
+                                <option value="epargne">Compte epargne</option>
+                                <option value="courant">Compte courant</option>
+                                <option value="bloque">Compte bloque</option>
+                            </select>
+                       </div>
+    
+                       <div>
+                            <label for="">Numero compte</label>
+                            <input type="text" name="numCompte" id="numCompte" placeholder="Numero compte.....">
+                        </div>
+    
+                        <div>
+                            <label for="">Numero agence</label>
+                            <input type="text" name="numAgence" id="numAgence" placeholder="Numero Agance.....">
+                        </div>
+    
+                        <div>
+                            <label for="">Cle rip</label>
+                            <input type="text" name="cleRip" id="cleRip" placeholder="Cle rip.....">
+                        </div>
+    
+                        <div class="frais" id="frais">
+                            <label for="">Frais ouverture</label>
+                            <input type="text" name="fouverture" id="fouverture" placeholder="Frais d'ouverture.....">
+                        </div> 
+                        
+                        <div class="agio" id="agio">
+                            <label for="">Agio</label>
+                            <input type="text" name="agio" id="agio" placeholder="L'agio.....">
+                        </div>
+    
+    
+                          
                     </div>
+                </fieldset>
+            </div>
 
-                    <div id="NewClent">
-                        <label for="">Nom</label>
-                        <input type="text" name="nom" id="nom" placeholder="*">
-
-                        <label for="">Prenom</label>
-                        <input type="text" name="prenom" id="prenom" placeholder="*">
-
-                        <label for="">Adresse</label>
-                        <input type="text" name="adresse" id="adresse" placeholder="*">
-
-                        <label for="">Telephone</label>
-                        <input type="text" name="tel" id="tel" placeholder="*">
-
-                        <label for="">Email</label>
-                        <input type="text" name="email" id="email" placeholder="">
-
-                        <label for="">Salair</label>
-                        <input type="text" name="salair" id="salair" placeholder="">
-
-                        <label for="">Profession</label>
-                        <input type="text" name="profession" id="profession" placeholder=""> 
+            <div>
+                <fieldset class="fieldset2">
+                    <legend class="legend">Information client:</legend>
+                    <div class="client1">
+                        
+                        <div class="btnVerif">
+                            <button class="btnNew" onclick="myNewClientFunction()">Nouveau client</button>
+                            <button class="btnOld" onclick="myOldClientFunction()">Ancien client</button>
+                        </div>
+    
+                        <div id="AncClient">
+                            <label class="">Liste des clients</label>
+                            <select name="id_asclient" class="form-control" >
+                                <option value="">---choisir un client---</option>
+                                <option value="">Seck</option>
+                                <option value="">Diop</option>
+                                <option value="">Fall</option>
+                            </select> 
+                        </div>
+    
+                        <div id="NewClent" class="NewClient">
+    
+                            <div class="colonne1">
+    
+                                <div class="textBox">
+                                    <label for="">Nom</label>
+                                    <input type="text" name="nom" id="nom" placeholder="Nom.....">
+                                </div>
+        
+                                <div>
+                                    <label for="">Prenom</label>
+                                    <input type="text" name="prenom" id="prenom" placeholder="Prenom.....">
+                                </div>
+        
+                                <div>
+                                    <label for="">Adresse</label>
+                                    <input type="text" name="adresse" id="adresse" placeholder="Adresse.....">
+                                </div>
+        
+                                <div>
+                                    <label for="">Telephone</label>
+                                    <input type="text" name="tel" id="tel" placeholder="Telephone.....">
+                                </div>
+    
+                            </div>
+                            <div class="colonne2">
+    
+                                <div>
+                                    <label for="">Email</label>
+                                    <input type="text" name="email" id="email" placeholder="Email.....">
+                                </div>
+    
+                                <div>
+                                    <label for="">Salair</label>
+                                    <input type="text" name="salair" id="salair" placeholder="Salaire.....">
+                                </div>
+    
+                                <div>
+                                    <label for="">Profession</label>
+                                    <input type="text" name="profession" id="profession" placeholder="Profession....."> 
+                                </div>
+    
+                            </div>
+                            
+                         </div>
                     </div>
-                </div>
+    
+                    
+                </fieldset>
+            </div>
 
-                
-            </fieldset>
+            <div>
+                <fieldset class="fieldset3" id="emp">
+                    <legend class="legend">Information employeur:</legend>
+                    <div class="employeur">
+    
+                        <div>
+                            <label for="">Raison social</label>
+                            <input type="text" name="raisonsocial" id="raisonsocial" placeholder="Raison social.....">
+                        </div>
+    
+                        <div>
+                            <label for="">Adresse employeur</label>
+                            <input type="text" name="adresse_employeur" id="adresse_employeur" placeholder="Adresse_employeur.....">
+                        </div>
+    
+                        <div>
+                            <label for="">Nom employeur</label>
+                            <input type="text" name="nom_employeur" id="nom_employeur" placeholder="Nom employeur.....">
+                        </div>
+    
+                        <div>
+                            <label for="">Num identification</label>
+                            <input type="text" name="num_id" id="num_id" placeholder="Num identification.....">
+                        </div>
+                     </div>
+                </fieldset>
+            </div>
+          </div>
 
-            <fieldset class="fieldset3" id="emp">
-                <legend class="legend">Information employeur:</legend>
-                <div class="employeur">
-
-                    <label for="">Raison social</label>
-                    <input type="text" name="raisonsocial" id="raisonsocial" placeholder="">
-
-                    <label for="">Adresse employeur</label>
-                    <input type="text" name="adresse_employeur" id="adresse_employeur" placeholder="">
-
-                    <label for="">Nom employeur</label>
-                    <input type="text" name="nom_employeur" id="nom_employeur" placeholder="">
-
-                    <label for="">Num identification</label>
-                    <input type="text" name="num_id" id="num_id" placeholder="">
-                </div>
-            </fieldset>
-
-             <input type="submit" class="btn" value="Enregistrer"/>
+            <div class="btnSave">
+                <input type="submit" class="btn" value="Enregistrer"/>
+            </div>
             
         </form>
-        <p class="error" style="color: red" id="error"></p>
+       
     </div>
     <script src="../js/add.js"></script>
 </body>

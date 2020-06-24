@@ -1,9 +1,9 @@
-var tentative = 5; // Cette variable contient le nombre de tentative de l'utilisateur.
-function validate(){
+var tentative = 3; // Cette variable contient le nombre de tentative de l'utilisateur.
+function login(){
 
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    if(email == "fallfallou37@gmail.com" && password == "passer@123"){
+    if(email == "admin" && password == "admin"){
 
         alert ("Login successfully");
         window.location = "ouvertureCompte.html"; // Redirection vers la page de l'ouverture compte
@@ -11,10 +11,10 @@ function validate(){
         
     }else{
         tentative --;
-        alert("Il te reste "+tentative+" tentative;");
+        alert("Il vous reste "+tentative+" tentative;");
         if(tentative == 0){
 
-        // Apres 5 tantative on desactive les champs.
+        // Apres 3 tantative on desactive les champs.
 
             document.getElementById("email").disabled = true;
             document.getElementById("password").disabled = true;
@@ -25,3 +25,4 @@ function validate(){
 
     }
 }
+
