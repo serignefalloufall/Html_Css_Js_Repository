@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gestionCompte.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <title>Gestion Compte</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">La banque du peuple</a></li>
+            <li class="item"><a href="gestionClient.html">Ajouter un nouveau client</a></li>
+            <li class="item"><a href="#">Rechercher client</a></li>
+        </ul>
+    </nav>
+    <div class="contenue">
+        <div class="error" id="message_error"></div>
+        
+        <form action="" class="formCompte" id="formCompte" onsubmit="return validationClient()">
+        
+            <fieldset class="fieldset" id="emp">
+                <legend class="legend">Information du compte:</legend>
+                <div class="itemFieldset">
+
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="" placeholder="Rechercher client">
+                        <a class="search-btn" href="#">
+                            <i class="fa fa-search"></i>
+                        </a>
+                       
+                    </div>
+
+                    <div class="compte">
+                       
+                        <div >
+                            <label for="">Type de compte:</label>
+                            <select name="selectCompte" id="selectCompte" onchange="myFunction()">
+                                <option value="1">Choisir un type de compte</option>
+                                <option value="epargne">Compte epargne</option>
+                                <option value="courant">Compte courant</option>
+                                <option value="bloque">Compte bloque</option>
+                            </select>
+                       </div>
+
+
+                       <div>
+                        <label for="">Date d'ouverture</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+
+                   <div>
+                        <label for="">Numero compte</label>
+                        <input type="text" name="numCompte" id="numCompte" placeholder="Numero compte.....">
+                    </div>
+
+                    <div>
+                        <label for="">Numero agence</label>
+                        <input type="text" name="numAgence" id="numAgence" placeholder="Numero Agance.....">
+                    </div>
+
+                    <div>
+                        <label for="">Cle rip</label>
+                        <input type="text" name="cleRip" id="cleRip" placeholder="Cle rip.....">
+                    </div>
+
+                    <div class="frais" id="frais">
+                        <label for="">Frais ouverture</label>
+                        <input type="text" name="fouverture" id="fouverture" placeholder="Frais d'ouverture.....">
+                    </div> 
+                    
+                    <div class="agio" id="agio">
+                        <label for="">Agio</label>
+                        <input type="text" name="agio" id="agio" placeholder="L'agio.....">
+                    </div>
+
+                </div>
+                <div class="btnSave">
+                    <input type="submit" class="btn" value="Enregistrer"/>
+                </div>
+            </fieldset>    
+        </form>  
+    </div>
+    <script src="../js/gestionCompte.js"></script>
+</body>
+</html>

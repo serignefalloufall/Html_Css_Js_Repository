@@ -53,37 +53,6 @@ function validation(){
     return true;
 }
 
-//Cette fonction c pour gerer les client
-   function myNewClientFunction() {
-    var x = document.getElementById("NewClent");
-    var y = document.getElementById("AncClient");
-    var z = document.getElementById("emp");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        y.style.display = "none";
-        z.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-  }
-
-  function myOldClientFunction() {
-   
-        var x = document.getElementById("AncClient");
-        var y = document.getElementById("NewClent");
-        var z = document.getElementById("emp");
-        
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          y.style.display = "none";
-          z.style.display = "none";
-        } else {
-          x.style.display = "none";
-          y.style.display = "block";
-        }
-}
-
 //Cette function permet de gerer les type de compte
 function myFunction() {
 
